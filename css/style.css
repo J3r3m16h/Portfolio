@@ -1,0 +1,52 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap');
+
+/* Base Styles */
+body { 
+    font-family: 'Inter', sans-serif; 
+    overflow-x: hidden;
+    background-color: #f5f5f4;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading { 
+    font-family: 'Space Grotesk', sans-serif; 
+}
+
+/* Typography & Responsive adjustments */
+@media (max-width: 640px) {
+    .text-4xl { font-size: 2rem !important; line-height: 2.5rem !important; }
+    .text-6xl { font-size: 3rem !important; line-height: 3.25rem !important; }
+    main { border-radius: 16px !important; }
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar { width: 8px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #F4EBE1; border-left: 2px solid #000; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #000; border-radius: 0px; border: 2px solid #F4EBE1; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #333; }
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Components */
+.skill-badge {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px 0px #000 !important;
+}
+
+/* Markdown/Prose styling for Case Studies */
+.prose p { margin-bottom: 1.5rem; color: #374151; line-height: 1.75; }
+.prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: #374151; }
+.prose li { margin-bottom: 0.5rem; }
+.prose code { background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.9em; }

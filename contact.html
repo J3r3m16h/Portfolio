@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremiah.</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen w-full bg-gradient-to-br from-[#ccfbf1] via-[#f5f5f4] to-[#ffedd5] flex items-center justify-center p-4 md:p-8 py-12 selection:bg-rose-300">
+
+    <main class="w-full max-w-7xl bg-[#F4EBE1] border-[3px] border-black rounded-[24px] md:rounded-[32px] shadow-[8px_8px_0px_0px_#000] overflow-hidden flex flex-col my-auto custom-scrollbar">
+        
+        <nav class="w-full border-b-[3px] border-black px-4 py-4 flex items-center justify-between bg-[#F4EBE1] sticky top-0 z-50">
+            <a href="index.html" class="text-2xl font-heading font-bold tracking-tight text-black">
+                Jeremiah<span class="text-rose-500">.</span>
+            </a>
+            
+            <button id="menu-toggle" class="md:hidden p-2 border-2 border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            
+            <div id="nav-links" class="hidden md:flex items-center gap-6 font-medium text-gray-900">
+                <a href="index.html" class="hover:text-rose-500 transition-colors">Home</a>
+                <a href="projects.html" class="hover:text-rose-500 transition-colors">Projects</a>
+                <a href="blog.html" class="hover:text-rose-500 transition-colors">Writeups</a>
+                <a href="resume.html" class="hover:text-rose-500 transition-colors">Resume</a>
+                <a href="contact.html" class="inline-block bg-teal-600 text-white font-heading font-bold px-5 py-2 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all">
+                    Hire Me
+                </a>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F4EBE1] border-b-[3px] border-black p-4 flex flex-col gap-4">
+            <a href="index.html" class="block font-bold py-2 border-b border-black">Home</a>
+            <a href="projects.html" class="block font-bold py-2 border-b border-black">Projects</a>
+            <a href="blog.html" class="block font-bold py-2 border-b border-black">Writeups</a>
+            <a href="resume.html" class="block font-bold py-2 border-b border-black">Resume</a>
+            <a href="contact.html" class="inline-block bg-teal-600 text-white font-heading font-bold px-5 py-2 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_#000] transition-all text-center">
+                Hire Me
+            </a>
+        </div>
+
+        <header class="p-8 md:p-12 lg:p-16 border-b-[3px] border-black bg-white text-center reveal">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black leading-tight mb-4">
+                Secure Terminal Endpoint
+            </h1>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+                Have a security infrastructure challenge, a network architecture issue, or an operational audit requirement? Drop a line to establish a connection.
+            </p>
+        </header>
+
+        <section class="grid grid-cols-1 lg:grid-cols-12 bg-white">
+            
+            <div class="lg:col-span-7 p-8 md:p-12 lg:p-16 flex flex-col justify-center border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-black bg-teal-50 reveal">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold text-black mb-4 leading-tight">
+                    Initialize Transmission
+                </h2>
+                <p class="text-gray-700 mb-8 max-w-md">
+                    Fill out the configuration parameters below to forward your project details or service inquiries.
+                </p>
+
+                <div id="success-banner" class="hidden bg-[#ccfbf1] border-2 border-black text-black px-4 py-4 rounded-xl mb-6 shadow-[2px_2px_0px_0px_#000] font-heading font-bold items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>Transmission successful! The payload has been delivered to Jeremiah.</span>
+                </div>
+                
+                <form id="contact-form" class="flex flex-col gap-4 w-full">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex flex-col">
+                            <label for="name" class="text-xs font-bold text-black uppercase tracking-wider mb-2 font-heading">Identity / Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required class="w-full bg-white border-2 border-black rounded-xl px-4 py-3 text-black placeholder-gray-400 font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-[2px_2px_0px_0px_#000]">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="email" class="text-xs font-bold text-black uppercase tracking-wider mb-2 font-heading">Return Address / Email</label>
+                            <input type="email" id="email" placeholder="john@example.com" required class="w-full bg-white border-2 border-black rounded-xl px-4 py-3 text-black placeholder-gray-400 font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-[2px_2px_0px_0px_#000]">
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col">
+                        <label for="subject" class="text-xs font-bold text-black uppercase tracking-wider mb-2 font-heading">Payload Header / Subject</label>
+                        <input type="text" id="subject" placeholder="Infrastructure Vulnerability Audit Request" required class="w-full bg-white border-2 border-black rounded-xl px-4 py-3 text-black placeholder-gray-400 font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-[2px_2px_0px_0px_#000]">
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="message" class="text-xs font-bold text-black uppercase tracking-wider mb-2 font-heading">Transmission Content / Message</label>
+                        <textarea id="message" placeholder="Detail your operational goals, timelines, or security engineering questions..." rows="5" required class="w-full bg-white border-2 border-black rounded-xl px-4 py-3 text-black placeholder-gray-400 font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-[2px_2px_0px_0px_#000] resize-none"></textarea>
+                    </div>
+
+                    <div id="otp-section" class="hidden flex-col mt-2">
+                        <label for="otp" class="text-xs font-bold text-black uppercase tracking-wider mb-2 font-heading">Authentication Code</label>
+                        <input type="text" id="otp" placeholder="Enter 6-digit code from email" class="w-full bg-[#ccfbf1] border-2 border-black rounded-xl px-4 py-3 text-black placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-[2px_2px_0px_0px_#000]">
+                        <p class="text-[10px] font-bold text-gray-500 mt-2 uppercase tracking-wide">Awaiting verification code from email endpoint...</p>
+                    </div>
+                    
+                    <button type="submit" id="submit-btn" class="bg-black text-white font-heading font-bold px-6 py-4 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_#FA8072] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#FA8072] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer mt-4 flex justify-center items-center gap-2">
+                        <span>SEND MESSAGE</span>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="lg:col-span-5 bg-[#F4EBE1] p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center reveal">
+                <h3 class="text-xl sm:text-2xl font-heading font-bold text-black mb-6 sm:mb-8">Direct Contact Nodes</h3>
+                
+                <div class="space-y-6">
+                    
+                    <div class="flex items-center gap-3 sm:gap-4 hover:translate-x-2 transition-transform">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 shrink-0 bg-white border-2 border-black rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Phone Node</p>
+                            <p class="font-heading font-bold text-black text-base sm:text-lg">+254 798 570 071</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 sm:gap-4 hover:translate-x-2 transition-transform">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 shrink-0 bg-white border-2 border-black rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="min-w-0">
+                            <p class="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Email Endpoint</p>
+                            <a href="mailto:jeremiah.muiruri@strathmore.edu" class="font-heading font-bold text-black text-sm sm:text-lg hover:text-rose-500 transition-colors break-all sm:break-normal">jeremiah.muiruri@strathmore.edu</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 sm:gap-4 hover:translate-x-2 transition-transform">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 shrink-0 bg-white border-2 border-black rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Geographic Base</p>
+                            <p class="font-heading font-bold text-black text-base sm:text-lg">Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="px-6 py-8 bg-white flex flex-col md:flex-row gap-4 items-center justify-between font-medium text-sm text-gray-700">
+            <p>&copy; <span id="current-year">2026</span> Jeremiah Mwaura. All rights reserved.</p>
+            
+            <div class="flex items-center gap-4">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border-2 border-black bg-stone-100 flex items-center justify-center text-black hover:bg-teal-200 transition-colors shadow-[2px_2px_0px_0px_#000]" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border-2 border-black bg-stone-100 flex items-center justify-center text-black hover:bg-rose-200 transition-colors shadow-[2px_2px_0px_0px_#000]" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border-2 border-black bg-stone-100 flex items-center justify-center text-black hover:bg-amber-200 transition-colors shadow-[2px_2px_0px_0px_#000]" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremiah.</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen w-full bg-gradient-to-br from-[#ccfbf1] via-[#f5f5f4] to-[#ffedd5] flex items-center justify-center p-4 md:p-8 py-12 selection:bg-rose-300">
+
+    <main class="w-full max-w-7xl bg-[#F4EBE1] border-[3px] border-black rounded-[24px] md:rounded-[32px] shadow-[8px_8px_0px_0px_#000] overflow-hidden flex flex-col my-auto custom-scrollbar">
+        
+        <nav class="w-full border-b-[3px] border-black px-4 py-4 flex items-center justify-between bg-[#F4EBE1] sticky top-0 z-50">
+            <a href="index.html" class="text-2xl font-heading font-bold tracking-tight text-black">
+                Jeremiah<span class="text-rose-500">.</span>
+            </a>
+            
+            <button id="menu-toggle" class="md:hidden p-2 border-2 border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            
+            <div id="nav-links" class="hidden md:flex items-center gap-6 font-medium text-gray-900">
+                <a href="index.html" class="hover:text-rose-500 transition-colors">Home</a>
+                <a href="projects.html" class="hover:text-rose-500 transition-colors">Projects</a>
+                <a href="blog.html" class="hover:text-rose-500 transition-colors">Writeups</a>
+                <a href="resume.html" class="text-rose-500 font-bold">Resume</a>
+                <a href="contact.html" class="inline-block bg-teal-600 text-white font-heading font-bold px-5 py-2 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all">
+                    Hire Me
+                </a>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F4EBE1] border-b-[3px] border-black p-4 flex flex-col gap-4 font-medium">
+            <a href="index.html" class="block font-bold py-2 border-b border-black">Home</a>
+            <a href="projects.html" class="block font-bold py-2 border-b border-black text-rose-500">Projects</a>
+            <a href="blog.html" class="block font-bold py-2 border-b border-black">Writeups</a>
+            <a href="resume.html" class="block font-bold py-2 border-b border-black text-rose-500">Resume</a>
+            <a href="contact.html" class="inline-block bg-teal-600 text-white font-heading font-bold px-5 py-2 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_#000] transition-all text-center">
+                Hire Me
+            </a>
+        </div>
+        
+        <header class="p-8 md:p-12 lg:p-16 border-b-[3px] border-black bg-white flex flex-col lg:flex-row gap-8 justify-between items-start lg:items-center reveal">
+            <div class="space-y-3">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black tracking-tight">
+                    Jeremiah Mwaura Muiruri
+                </h1>
+                <p class="text-xl md:text-2xl font-bold text-teal-600 font-heading">
+                    Cybersecurity & Network Infrastructure Engineer
+                </p>
+                <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-gray-700 font-mono">
+                    <span class="flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Nairobi, Kenya
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+254798570071" class="hover:text-rose-500 transition-colors">+254 798 570 071</a>
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <a href="mailto:jeremiah.muiruri@strathmore.edu" class="hover:text-rose-500 transition-colors">jeremiah.muiruri@strathmore.edu</a>
+                    </span>
+                </div>
+            </div>
+            
+            <a href="cv/Jeremiah-CV.pdf" target="_blank" class="w-full lg:w-auto inline-flex items-center justify-center gap-2 bg-black text-white font-heading font-bold px-6 py-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_#FA8072] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#FA8072] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Download CV</span>
+            </a>
+        </header>
+
+        <section class="grid grid-cols-1 lg:grid-cols-12 bg-[#F4EBE1]">
+            
+            <div class="lg:col-span-7 p-8 md:p-12 lg:p-16 space-y-12 border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-black bg-teal-50 reveal">
+                
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-heading font-bold text-black flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-rose-200 border-2 border-black flex items-center justify-center text-black shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        </span> 
+                        Operational Objective
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed font-medium">
+                        To obtain a position as an information security analyst, network security engineer, or similar role leveraging robust structural skills in securing computer networks and digital ecosystems against sophisticated cyber threats. Committed to continuously expanding core technical matrices to counter evolving zero-day perimeters.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-heading font-bold text-black flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-teal-200 border-2 border-black flex items-center justify-center text-black shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </span> 
+                        Experience Records
+                    </h2>
+                    
+                    <div class="relative pl-6 border-l-[3px] border-black space-y-8">
+                        <div class="relative">
+                            <div class="absolute w-4 h-4 bg-white border-[3px] border-black rounded-full -left-[34px] top-1.5 shadow-[2px_2px_0px_0px_#000]"></div>
+                            <h3 class="text-xl font-bold text-black font-heading">IT Engineering Intern</h3>
+                            <div class="text-sm font-bold text-teal-600 font-mono mt-0.5">Naya Solutions Limited, Nairobi | Jan 2024 - Mar 2024</div>
+                            <ul class="list-disc pl-5 mt-3 text-gray-700 text-sm font-medium space-y-1.5 leading-relaxed">
+                                <li>Installed, configured, and troubleshot complex client network infrastructure array targets including routing groups and enterprise Wi-Fi topologies.</li>
+                                <li>Gained cross-departmental operations engineering exposure across structural structured cabling setups, directory assets, and direct server configuration controls.</li>
+                                <li>Managed active maintenance pipelines within a secure ticket-driven architecture keeping strict adherence to corporate structural security metrics.</li>
+                            </ul>
+                        </div>
+
+                        <div class="relative">
+                            <div class="absolute w-4 h-4 bg-white border-[3px] border-black rounded-full -left-[34px] top-1.5 shadow-[2px_2px_0px_0px_#000]"></div>
+                            <h3 class="text-xl font-bold text-black font-heading">ICT Support Intern</h3>
+                            <div class="text-sm font-bold text-teal-600 font-mono mt-0.5">CITAM Church, Nairobi | June 2025 - Sep 2025</div>
+                            <ul class="list-disc pl-5 mt-3 text-gray-700 text-sm font-medium space-y-1.5 leading-relaxed">
+                                <li>Provided technical support and troubleshooting for church IT systems, ensuring smooth operation of digital services.</li>
+                                <li>Assisted in the setup and maintenance of audio-visual equipment for church events and services.</li>
+                                <li>Collaborated with team members to implement IT solutions that enhanced operational efficiency and user experience.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-heading font-bold text-black flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-amber-200 border-2 border-black flex items-center justify-center text-black shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </span> 
+                        Research & Project Assets
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="p-5 bg-stone-50 border-[3px] border-black rounded-xl shadow-[4px_4px_0px_0px_#000] hover:-translate-y-0.5 transition-transform">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                                <h3 class="text-lg font-bold text-black font-heading">Web-Based Dynamic Malware Detection</h3>
+                                <span class="text-xs font-mono font-bold bg-white border border-black px-2 py-0.5 rounded text-gray-500 self-start sm:self-auto">Apr 2024 - Nov 2024</span>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium leading-relaxed">
+                                Architected and implemented an interface tracking pipeline capable of isolating and programmatically detecting malicious behavior payloads hiding inside compilation executable file sets.
+                            </p>
+                        </div>
+
+                        <div class="p-5 bg-stone-50 border-[3px] border-black rounded-xl shadow-[4px_4px_0px_0px_#000] hover:-translate-y-0.5 transition-transform">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                                <h3 class="text-lg font-bold text-black font-heading">CNN System for Network Steganalysis</h3>
+                                <span class="text-xs font-mono font-bold bg-white border border-black px-2 py-0.5 rounded text-gray-500 self-start sm:self-auto">Apr 2023 - Jul 2023</span>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium leading-relaxed">
+                                Researched and constructed a functional deep learning diagnostic infrastructure deploying Convolutional Neural Networks designed to parse data vectors and uncover stealthy hidden malware components concealed via steganography layers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-heading font-bold text-black flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-purple-200 border-2 border-black flex items-center justify-center text-black shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                        </span> 
+                        Education Log
+                    </h2>
+                    
+                    <div class="relative pl-6 border-l-[3px] border-black space-y-6">
+                        <div class="relative">
+                            <div class="absolute w-4 h-4 bg-white border-[3px] border-black rounded-full -left-[34px] top-1.5 shadow-[2px_2px_0px_0px_#000]"></div>
+                            <h3 class="text-lg font-bold text-black font-heading">B.S. in Computer Networks and Cyber Security</h3>
+                            <div class="text-sm font-bold text-rose-500 font-mono">Strathmore University | 2021 - 2025</div>
+                            <p class="text-xs font-bold text-gray-500 mt-0.5 uppercase tracking-wider">Graduated with Honors</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute w-4 h-4 bg-white border-[3px] border-black rounded-full -left-[34px] top-1.5 shadow-[2px_2px_0px_0px_#000]"></div>
+                            <h3 class="text-lg font-bold text-black font-heading">Secondary Level Education (8-4-4 Framework)</h3>
+                            <div class="text-sm font-bold text-gray-600 font-mono">St. Anthony's Boys High School | 2017 - 2020</div>
+                            <p class="text-sm font-semibold text-gray-700">Attained Overall Certification Metric: Grade B</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-5 p-8 md:p-12 lg:p-16 space-y-12 flex flex-col justify-start reveal">
+                
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-heading font-bold text-black flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-stone-200 border-2 border-black flex items-center justify-center text-black shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </span> 
+                        Skills Vector
+                    </h2>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="text-xs font-mono font-bold bg-white text-black border-2 border-black px-3 py-1.5 rounded-xl shadow-[2px_2px_0px_0px_#000]">Network Administration</span>
+                        <span class="text-xs font-mono font-bold bg-white text-black border-2 border-black px-3 py-1.5 rounded-xl shadow-[2px_2px_0px_0px_#000]">Python Scripting</span>
+                        <span class="text-xs font-mono font-bold bg-white text-black border-2 border-black px-3 py-1.5 rounded-xl shadow-[2px_2px_0px_0px_#000]">Web Development</span>
+                        <span class="text-xs font-mono font-bold bg-white text-black border-2 border-black px-3 py-1.5 rounded-xl shadow-[2px_2px_0px_0px_#000]">Graphics Design</span>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-heading font-bold text-black flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-emerald-200 border-2 border-black flex items-center justify-center text-black shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        </span> 
+                        Certifications & Training
+                    </h2>
+                    <div class="grid grid-cols-1 gap-3">
+                        <div class="p-4 bg-white border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] flex items-center justify-between">
+                            <span class="text-sm font-bold text-black font-heading">Network Security (Cisco Academy)</span>
+                            <span class="text-[10px] font-mono bg-stone-100 border border-black px-1.5 py-0.5 rounded font-bold">VERIFIED</span>
+                        </div>
+                        <div class="p-4 bg-white border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] flex items-center justify-between">
+                            <span class="text-sm font-bold text-black font-heading">Introduction to Cybersecurity (Cisco)</span>
+                            <span class="text-[10px] font-mono bg-stone-100 border border-black px-1.5 py-0.5 rounded font-bold">VERIFIED</span>
+                        </div>
+                        <div class="p-4 bg-white border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] flex items-center justify-between">
+                            <span class="text-sm font-bold text-black font-heading">AWS Cloud Foundations (Academy)</span>
+                            <span class="text-[10px] font-mono bg-stone-100 border border-black px-1.5 py-0.5 rounded font-bold">VERIFIED</span>
+                        </div>
+                        <div class="p-4 bg-white border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] flex items-center justify-between">
+                            <span class="text-sm font-bold text-black font-heading">Python Essentials (Cisco Academy)</span>
+                            <span class="text-[10px] font-mono bg-stone-100 border border-black px-1.5 py-0.5 rounded font-bold">VERIFIED</span>
+                        </div>
+                        <div class="p-4 bg-white border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] flex items-center justify-between">
+                            <span class="text-sm font-bold text-black font-heading">IT Essentials (Cisco Systems)</span>
+                            <span class="text-[10px] font-mono bg-stone-100 border border-black px-1.5 py-0.5 rounded font-bold">VERIFIED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-heading font-bold text-black flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-indigo-200 border-2 border-black flex items-center justify-center text-black shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                        </span> 
+                        Achievements
+                    </h2>
+                    <div class="space-y-3">
+                        <div class="p-4 bg-rose-50 border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] font-medium text-sm text-gray-800 flex items-start gap-2.5">
+                            <span class="text-rose-500 pt-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </span>
+                            <div><strong>President's Award Framework:</strong> Attained both Silver & Bronze Verification Recognition Certificates.</div>
+                        </div>
+                        <div class="p-4 bg-rose-50 border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] font-medium text-sm text-gray-800 flex items-start gap-2.5">
+                            <span class="text-rose-500 pt-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            </span>
+                            <div><strong>First Aid Response:</strong> Awarded active First Aid Participation validation controls.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-heading font-bold text-black flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-orange-200 border-2 border-black flex items-center justify-center text-black shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </span> 
+                        Volunteering
+                    </h2>
+                    <div class="p-5 bg-white border-[3px] border-black rounded-xl shadow-[4px_4px_0px_0px_#000]">
+                        <h4 class="font-bold text-black font-heading text-base">Community Engagement Representative</h4>
+                        <p class="text-xs font-bold text-teal-600 font-mono mt-0.5">CITAM Valley Road | Jan 2023 - Mar 2023</p>
+                        <p class="text-sm text-gray-700 mt-2 font-medium">
+                            Engaged in direct support services, organizing communal workflows, and community engagement assignments.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="px-6 py-8 bg-white flex flex-col md:flex-row gap-4 items-center justify-between font-medium text-sm text-gray-700">
+            <p>&copy; <span id="current-year">2026</span> Jeremiah Mwaura. All rights reserved.</p>
+            
+            <div class="flex items-center gap-4">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border-2 border-black bg-stone-100 flex items-center justify-center text-black hover:bg-teal-200 transition-colors shadow-[2px_2px_0px_0px_#000]" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border-2 border-black bg-stone-100 flex items-center justify-center text-black hover:bg-rose-200 transition-colors shadow-[2px_2px_0px_0px_#000]" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border-2 border-black bg-stone-100 flex items-center justify-center text-black hover:bg-amber-200 transition-colors shadow-[2px_2px_0px_0px_#000]" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

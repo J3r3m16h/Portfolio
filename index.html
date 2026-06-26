@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremiah.</title>
+    
+    <!-- Tailwind CSS Browser CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen w-full bg-gradient-to-br from-[#ccfbf1] via-[#f5f5f4] to-[#ffedd5] flex items-center justify-center p-4 md:p-8 py-12 selection:bg-rose-300">
+
+    <!-- Centralized Canvas Container -->
+    <main class="w-full max-w-7xl bg-[#F4EBE1] border-[3px] border-black rounded-[24px] md:rounded-[32px] shadow-[8px_8px_0px_0px_#000] overflow-hidden flex flex-col my-auto custom-scrollbar">
+        
+        <!-- Navigation -->
+        <nav class="w-full border-b-[3px] border-black px-4 py-4 flex items-center justify-between bg-[#F4EBE1] sticky top-0 z-50">
+            <a href="index.html" class="text-2xl font-heading font-bold tracking-tight text-black">
+                Jeremiah<span class="text-rose-500">.</span>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden p-2 border-2 border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            
+            <!-- Desktop Links -->
+            <div id="nav-links" class="hidden md:flex items-center gap-6 font-medium text-gray-900">
+                <a href="index.html" class="text-rose-500 font-bold">Home</a>
+                <a href="projects.html" class="hover:text-rose-500">Projects</a>
+                <a href="blog.html" class="hover:text-rose-500">Writeups</a>
+                <a href="resume.html" class="hover:text-rose-500">Resume</a>
+                <a href="contact.html" class="inline-block bg-teal-600 text-white font-heading font-bold px-5 py-2 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all">
+                    Hire Me
+                </a>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Drawer (Initially hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F4EBE1] border-b-[3px] border-black p-4 flex flex-col gap-4">
+            <a href="index.html" class="block font-bold py-2 border-b border-black text-rose-500">Home</a>
+            <a href="projects.html" class="block font-bold py-2 border-b border-black">Projects</a>
+            <a href="blog.html" class="block font-bold py-2 border-b border-black">Writeups</a>
+            <a href="resume.html" class="block font-bold py-2">Resume</a>
+            <a href="contact.html" class="inline-block bg-teal-600 text-white font-heading font-bold px-5 py-2 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all">
+                Hire Me
+            </a>
+        </div>
+
+        <!-- 2. HERO SECTION -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 border-b-[3px] border-black bg-white reveal">
+            <!-- Left Side: Content -->
+            <div class="lg:col-span-7 p-8 md:p-12 lg:p-16 flex flex-col justify-center border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-black">
+                <div class="inline-block bg-amber-200 border-2 border-black px-4 py-1 rounded-full font-heading font-bold text-sm mb-6 w-max shadow-[2px_2px_0px_0px_#000]">
+                    Your Cybersecurity Ally
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black leading-tight mb-6">
+                    The Cybersecurity Analyst & Network Engineer You Can Trust
+                </h1>
+                <p class="text-lg text-gray-700 max-w-xl mb-8 leading-relaxed">
+                    I am an information security analyst and network security engineer, with a strong foundation in computer networks, cybersecurity, and Python scripting — ready to help organizations defend against evolving cyber threats.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="projects.html" class="inline-flex items-center gap-2 bg-[#FA8072] text-black font-heading font-bold text-lg px-8 py-4 rounded-2xl border-[3px] border-black shadow-[5px_5px_0px_0px_#000] hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all">
+                        View My Work
+                    </a>
+                    <a href="cv/Jeremiah-CV.pdf" class="inline-flex items-center gap-2 bg-white text-black font-heading font-bold text-lg px-8 py-4 rounded-2xl border-[3px] border-black shadow-[5px_5px_0px_0px_#000] hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all">
+                        Download CV
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Side: Profile Image -->
+            <div class="lg:col-span-5 bg-teal-50 p-8 md:p-12 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#000 2px, transparent 2px); background-size: 24px 24px;"></div>
+                <img src="img/jere.png" alt="Jeremiah Mwaura" class="relative z-10 w-full max-w-[360px] h-auto object-cover rounded-3xl border-[4px] border-black shadow-[8px_8px_0px_0px_#000] rotate-2 hover:rotate-0 transition-transform duration-300 bg-white">
+            </div>
+        </section>
+
+        <!-- 3. TECHNICAL ARSENAL -->
+        <div class="w-full bg-[#F4EBE1] py-8 px-8 md:px-16 border-b-[3px] border-black flex flex-col md:flex-row gap-6 items-center justify-between reveal">
+            <h3 class="text-xl font-heading font-bold text-black whitespace-nowrap">Technical Arsenal:</h3>
+            <div class="flex flex-wrap justify-center md:justify-end gap-3 font-heading font-bold text-sm">
+                <span class="skill-badge bg-white border-2 border-black rounded-full px-4 py-2 shadow-[2px_2px_0px_0px_#000]">Network Administration</span>
+                <span class="skill-badge bg-[#FA8072] border-2 border-black rounded-full px-4 py-2 shadow-[2px_2px_0px_0px_#000]">Python Scripting</span>
+                <span class="skill-badge bg-teal-300 border-2 border-black rounded-full px-4 py-2 shadow-[2px_2px_0px_0px_#000]">All-round Developer</span>
+                <span class="skill-badge bg-amber-300 border-2 border-black rounded-full px-4 py-2 shadow-[2px_2px_0px_0px_#000]">Graphics Design</span>
+                <span class="skill-badge bg-[#FA8072] border-2 border-black rounded-full px-4 py-2 shadow-[2px_2px_0px_0px_#000]">Cyber Security</span>
+            </div>
+        </div>
+
+        <!-- 4. ABOUT & CORE CAPABILITIES SECTION -->
+        <section id="about" class="p-8 md:p-12 lg:p-16 border-b-[3px] border-black bg-stone-50 reveal">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-black mb-10 tracking-tight text-center">
+                    Core Expertise & Background
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 border-[3px] border-black rounded-2xl shadow-[4px_4px_0px_0px_#000] hover:-translate-y-1 transition-transform">
+                        <div class="w-14 h-14 rounded-full bg-teal-400 border-2 border-black flex items-center justify-center text-black mb-6 shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-black mb-3">Network Engineering</h3>
+                        <p class="text-gray-700 leading-relaxed text-sm">Custom topology design, robust routing protocols, and high-performance switching built to meet and exceed client performance requirements.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 border-[3px] border-black rounded-2xl shadow-[4px_4px_0px_0px_#000] hover:-translate-y-1 transition-transform">
+                        <div class="w-14 h-14 rounded-full bg-[#FA8072] border-2 border-black flex items-center justify-center text-black mb-6 shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-black mb-3">Vulnerability Management</h3>
+                        <p class="text-gray-700 leading-relaxed text-sm">Conducting rigorous ethical hacking, penetration testing, and continuous vulnerability scans to uncover and patch critical system flaws.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 border-[3px] border-black rounded-2xl shadow-[4px_4px_0px_0px_#000] hover:-translate-y-1 transition-transform">
+                        <div class="w-14 h-14 rounded-full bg-amber-400 border-2 border-black flex items-center justify-center text-black mb-6 shadow-[2px_2px_0px_0px_#000]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-black mb-3">DevOps & Monitoring</h3>
+                        <p class="text-gray-700 leading-relaxed text-sm">Streamlining CI/CD workflows and actively tracking infrastructure health using industry-standard tools like Jenkins, Prometheus, and Nagios.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. EXPERIENCE TIMELINE -->
+        <section id="experience" class="p-8 md:p-12 lg:p-16 border-b-[3px] border-black bg-white reveal">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-black mb-12 tracking-tight">
+                Experience & Journey
+            </h2>
+            
+            <div class="relative border-l-4 border-black ml-4 md:ml-6 space-y-10">
+                <div class="relative pl-8 md:pl-12 reveal">
+                    <div class="absolute -left-[14px] top-1 w-6 h-6 bg-[#FA8072] border-[3px] border-black rounded-full"></div>
+                    <div class="bg-[#F4EBE1] border-[3px] border-black rounded-2xl p-6 shadow-[4px_4px_0px_0px_#000] hover:shadow-[6px_6px_0px_0px_#000] transition-shadow">
+                        <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-full mb-3">2023 - Present</span>
+                        <h3 class="text-xl font-heading font-bold text-black mb-1">Freelance Graphic Designer</h3>
+                        <h4 class="text-md font-bold text-teal-700 mb-3">Independent Consultant</h4>
+                        <p class="text-gray-700 text-sm leading-relaxed">Designing visually compelling graphics and branding materials for various clients, ensuring high-quality and impactful visual communication.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12 reveal">
+                    <div class="absolute -left-[14px] top-1 w-6 h-6 bg-teal-400 border-[3px] border-black rounded-full"></div>
+                    <div class="bg-[#F4EBE1] border-[3px] border-black rounded-2xl p-6 shadow-[4px_4px_0px_0px_#000] hover:shadow-[6px_6px_0px_0px_#000] transition-shadow">
+                        <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-full mb-3">2021 - 2024</span>
+                        <h3 class="text-xl font-heading font-bold text-black mb-1">BSc in Computer Networks and Cyber Security</h3>
+                        <h4 class="text-md font-bold text-teal-700 mb-3">Strathmore University</h4>
+                        <p class="text-gray-700 text-sm leading-relaxed">Comprehensive coursework covering ethical hacking, network engineering, cloud infrastructure, and cryptography. Graduated with honors, participating in multiple Capture The Flag (CTF) events.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12 reveal">
+                    <div class="absolute -left-[14px] top-1 w-6 h-6 bg-amber-400 border-[3px] border-black rounded-full"></div>
+                    <div class="bg-[#F4EBE1] border-[3px] border-black rounded-2xl p-6 shadow-[4px_4px_0px_0px_#000] hover:shadow-[6px_6px_0px_0px_#000] transition-shadow">
+                        <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Jan 2024 - April 2024</span>
+                        <h3 class="text-xl font-heading font-bold text-black mb-1">IT Networking Internship</h3>
+                        <h4 class="text-md font-bold text-teal-700 mb-3">NAYA Solutions</h4>
+                        <p class="text-gray-700 text-sm leading-relaxed">Gained experience in structured cabling, network configurations, and IT support within a corporate environment. Strengthened troubleshooting skills and enhanced customer service through direct client engagement.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12 reveal">
+                    <div class="absolute -left-[14px] top-1 w-6 h-6 bg-teal-400 border-[3px] border-black rounded-full"></div>
+                    <div class="bg-[#F4EBE1] border-[3px] border-black rounded-2xl p-6 shadow-[4px_4px_0px_0px_#000] hover:shadow-[6px_6px_0px_0px_#000] transition-shadow">
+                        <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-full mb-3">June 2025 - Sep 2025</span>
+                        <h3 class="text-xl font-heading font-bold text-black mb-1">ICT Internship</h3>
+                        <h4 class="text-md font-bold text-teal-700 mb-3">CITAM Church</h4>
+                        <p class="text-gray-700 text-sm leading-relaxed">Gained hands-on experience in network management, cybersecurity practices, and IT support within a corporate setting.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12 reveal">
+                    <div class="absolute -left-[14px] top-1 w-6 h-6 bg-[#FA8072] border-[3px] border-black rounded-full"></div>
+                    <div class="bg-[#F4EBE1] border-[3px] border-black rounded-2xl p-6 shadow-[4px_4px_0px_0px_#000] hover:shadow-[6px_6px_0px_0px_#000] transition-shadow">
+                        <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-full mb-3">2025 - Present</span>
+                        <h3 class="text-xl font-heading font-bold text-black mb-1">Freelance Cybersecurity Analyst & Developer</h3>
+                        <h4 class="text-md font-bold text-teal-700 mb-3">Independent Consultant</h4>
+                        <p class="text-gray-700 text-sm leading-relaxed">I provide cybersecurity analysis and development services, helping clients secure their digital assets and implement robust security measures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PORTFOLIO SECTION -->
+        <section id="projects" class="p-8 md:p-12 lg:p-16 border-b-[3px] border-black bg-[#F4EBE1] reveal">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-black mb-4 tracking-tight">
+                Featured Projects & Work
+            </h2>
+            <p class="text-gray-700 mb-10 max-w-2xl">A closer look at some of the practical implementations, network designs, and security audits I have conducted.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group bg-white border-[3px] border-black rounded-2xl p-4 flex flex-col justify-between shadow-[4px_4px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#000] transition-all">
+                    <div>
+                        <div class="w-full h-48 mb-4 border-2 border-black rounded-xl overflow-hidden bg-teal-50">
+                            <img src="img/web.png" alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-black mb-2">Secure Web & Mobile Apps</h3>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-[10px] font-bold bg-gray-200 border border-black px-2 py-1 rounded">React</span>
+                            <span class="text-[10px] font-bold bg-gray-200 border border-black px-2 py-1 rounded">Node.js</span>
+                            <span class="text-[10px] font-bold bg-gray-200 border border-black px-2 py-1 rounded">OWASP</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">Building functional, user-friendly, and securely configured digital platforms resistant to common web vulnerabilities.</p>
+                    </div>
+                    <a href="case-study-web.html" class="inline-flex items-center gap-1 font-heading font-bold text-sm text-black group-hover:text-teal-600 transition-colors w-full justify-between border-t-2 border-black pt-3">
+                        View Case Study <span class="group-hover:translate-x-1 transition-transform bg-black text-white rounded-full w-6 h-6 flex items-center justify-center">→</span>
+                    </a>
+                </div>
+
+                <div class="group bg-white border-[3px] border-black rounded-2xl p-4 flex flex-col justify-between shadow-[4px_4px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#000] transition-all">
+                    <div>
+                        <div class="w-full h-48 mb-4 border-2 border-black rounded-xl overflow-hidden bg-rose-50">
+                            <img src="img/ml.png" alt="Project 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-black mb-2">ML Threat Detection</h3>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-[10px] font-bold bg-gray-200 border border-black px-2 py-1 rounded">Python</span>
+                            <span class="text-[10px] font-bold bg-gray-200 border border-black px-2 py-1 rounded">TensorFlow</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">Developing tailored ML models to analyze network traffic data and automate the flagging of anomalous behavior.</p>
+                    </div>
+                    <a href="case-study-ml.html" class="inline-flex items-center gap-1 font-heading font-bold text-sm text-black group-hover:text-[#FA8072] transition-colors w-full justify-between border-t-2 border-black pt-3">
+                        View Case Study <span class="group-hover:translate-x-1 transition-transform bg-black text-white rounded-full w-6 h-6 flex items-center justify-center">→</span>
+                    </a>
+                </div>
+
+                <div class="group bg-white border-[3px] border-black rounded-2xl p-4 flex flex-col justify-between shadow-[4px_4px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#000] transition-all">
+                    <div>
+                        <div class="w-full h-48 mb-4 border-2 border-black rounded-xl overflow-hidden bg-amber-50">
+                            <img src="img/nt.png" alt="Project 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-black mb-2">Vulnerability Scanning</h3>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-[10px] font-bold bg-gray-200 border border-black px-2 py-1 rounded">Kali Linux</span>
+                            <span class="text-[10px] font-bold bg-gray-200 border border-black px-2 py-1 rounded">Nmap</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">Real-world infrastructure assessments, penetration testing, and comprehensive risk mitigation reporting.</p>
+                    </div>
+                    <a href="case-study.html" class="inline-flex items-center gap-1 font-heading font-bold text-sm text-black group-hover:text-amber-500 transition-colors w-full justify-between border-t-2 border-black pt-3">
+                        View Case Study <span class="group-hover:translate-x-1 transition-transform bg-black text-white rounded-full w-6 h-6 flex items-center justify-center">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT FORM & FOOTER SECTION -->
+        <section id="contact" class="bg-white flex flex-col reveal">
+            <!-- Form Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 border-b-[3px] border-black">
+                <!-- Left Form Column -->
+                <div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center border-b-[3px] md:border-b-0 md:border-r-[3px] border-black bg-teal-50">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-black mb-4 leading-tight">
+                        Let's build something secure.
+                    </h2>
+                    <p class="text-gray-700 mb-8 max-w-md">
+                        Whether you need a complete network overhaul, a security audit, or a custom application, I'm ready to help.
+                    </p>
+                    
+                    <form id="contact-form" class="flex flex-col gap-4 w-full">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" id="name" placeholder="Name" required class="w-full bg-white border-2 border-black rounded-xl px-4 py-3 text-black placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-[2px_2px_0px_0px_#000]">
+                            
+                            <input type="email" id="email" placeholder="Email" required class="w-full bg-white border-2 border-black rounded-xl px-4 py-3 text-black placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-[2px_2px_0px_0px_#000]">
+                        </div>
+                        
+                        <textarea id="message" placeholder="Tell me about your project..." rows="4" required class="w-full bg-white border-2 border-black rounded-xl px-4 py-3 text-black placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-[2px_2px_0px_0px_#000] resize-none"></textarea>
+                        
+                        <button type="submit" id="submit-btn" class="w-full sm:w-auto bg-black text-white font-heading font-bold px-6 py-4 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_#FA8072] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#FA8072] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer mt-2 flex justify-center items-center gap-2">
+                            <span>SEND MESSAGE</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Right Info Column -->
+                <div class="bg-[#F4EBE1] p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                    <h3 class="text-2xl font-heading font-bold text-black mb-8">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 hover:translate-x-2 transition-transform">
+                            <div class="w-12 h-12 bg-white border-2 border-black rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#000]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Phone</p>
+                                <p class="font-heading font-bold text-black text-lg">+254 798 570 071</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 hover:translate-x-2 transition-transform">
+                            <div class="w-12 h-12 bg-white border-2 border-black rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#000]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Email</p>
+                                <p class="font-heading font-bold text-black text-lg">jeremiah.muiruri@strathmore.edu</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 hover:translate-x-2 transition-transform">
+                            <div class="w-12 h-12 bg-white border-2 border-black rounded-full flex items-center justify-center shadow-[2px_2px_0px_0px_#000]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Location</p>
+                                <p class="font-heading font-bold text-black text-lg">Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="px-6 py-8 bg-white flex flex-col md:flex-row gap-4 items-center justify-between font-medium text-sm text-gray-700">
+                <p>&copy; <span id="current-year">2026</span> Jeremiah Mwaura. All rights reserved.</p>
+                
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border-2 border-black bg-stone-100 flex items-center justify-center text-black hover:bg-teal-200 transition-colors shadow-[2px_2px_0px_0px_#000]" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border-2 border-black bg-stone-100 flex items-center justify-center text-black hover:bg-rose-200 transition-colors shadow-[2px_2px_0px_0px_#000]" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border-2 border-black bg-stone-100 flex items-center justify-center text-black hover:bg-amber-200 transition-colors shadow-[2px_2px_0px_0px_#000]" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                    </a>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
