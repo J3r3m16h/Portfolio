@@ -148,9 +148,31 @@ document.addEventListener("DOMContentLoaded", () => {
                         }, 3500);
                         
                     } else {
-                        // Incorrect code
-                        alert("Authentication Failed: " + result.message);
-                        btnText.textContent = "VERIFY & TRANSMIT";
+                        // 1. Show the Error Banner
+                        const errorBanner = document.getElementById('error-banner');
+                        const errorText = document.getElementById('error-text');
+                        
+                        if (errorBanner && errorText) {
+                            errorText.textContent = "Authentication Failed: " + result.message;
+                            errorBanner.classList.remove('hidden');
+                            errorBanner.classList.add('flex');
+                        }
+
+                        // 2. Wait 3.5 seconds, then refresh the error state so they can try again
+                        setTimeout(() => {
+                            // Hide the error banner
+                            if (errorBanner) {
+                                errorBanner.classList.add('hidden');
+                                errorBanner.classList.remove('flex');
+                            }
+                            // Clear the OTP input so they can re-type it
+                            otpInput.value = '';
+                            btnText.textContent = "VERIFY & TRANSMIT";
+                            
+                            // NOTE: If you truly want to wipe everything and do a full page reload instead, 
+                            // delete the 6 lines above and uncomment the line below:
+                            // window.location.reload();
+                        }, 3500);
                     }
                 } catch (error) {
                     alert("Network timeout during transmission.");
