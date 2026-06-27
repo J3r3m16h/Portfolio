@@ -254,3 +254,26 @@ if (loader) {
         }
     }, 150); // Speed of the progress updates
 }
+
+// --- Back to Top Button Logic ---
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+if (scrollToTopBtn) {
+    // Listen for scrolling on the window
+    window.addEventListener('scroll', () => {
+        // Show the button if scrolled down more than 300 pixels
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+        } else {
+            scrollToTopBtn.classList.add('hidden');
+        }
+    });
+
+    // Smooth scroll to the top when clicked
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
