@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeremiah.</title>
+    <link rel="icon" type="image/png" href="img/J-logo.png">
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
@@ -107,6 +108,25 @@
                 <p>With valid credentials, I used <code>bloodhound-python</code> to collect AD data and visualized it. The attack path showed that our user was part of the <em>Exchange Windows Permissions</em> group, which has WriteDacl rights over the domain. From there, it was a simple DCSync attack to dump the Administrator hash and secure the root flag!</p>
             </div>
         </article>
+
+        <!-- Navigation Links -->
+        <div class="w-full border-t-[3px] border-black pt-6 mt-10 mb-6 flex items-center justify-between px-4 md:px-8 font-heading">
+    
+            <a href="blog.html" class="group flex items-center px-4 py-2 bg-stone-100 border-[2px] border-black rounded-lg shadow-[2px_2px_0px_0px_#000] hover:bg-rose-200 hover:shadow-[4px_4px_0px_0px_#000] hover:-translate-y-0.5 active:translate-y-[2px] active:shadow-[0px_0px_0px_0px_#000] transition-all text-black font-bold text-sm md:text-base">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="mr-2 group-hover:-translate-x-1 transition-transform">
+                    <path d="m15 18-6-6 6-6"/>
+                </svg>
+                Back to Writeups
+            </a>
+
+            <a href="blog-proxmox-setup.html" class="group flex items-center px-4 py-2 bg-stone-100 border-[2px] border-black rounded-lg shadow-[2px_2px_0px_0px_#000] hover:bg-teal-200 hover:shadow-[4px_4px_0px_0px_#000] hover:-translate-y-0.5 active:translate-y-[2px] active:shadow-[0px_0px_0px_0px_#000] transition-all text-black font-bold text-sm md:text-base">
+                Next
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform">
+                    <path d="m9 18 6-6-6-6"/>
+                </svg>
+            </a>
+
+        </div>
 
         <!-- Footer -->
         <footer class="px-6 py-8 bg-white flex flex-col md:flex-row gap-4 items-center justify-between font-medium text-sm text-gray-700">
