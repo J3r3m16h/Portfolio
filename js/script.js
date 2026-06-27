@@ -277,3 +277,36 @@ if (scrollToTopBtn) {
         });
     });
 }
+
+// --- Brutalist Cookie Consent Logic ---
+const cookieBanner = document.getElementById('cookie-banner');
+const acceptBtn = document.getElementById('accept-cookies');
+const declineBtn = document.getElementById('decline-cookies');
+
+if (cookieBanner && acceptBtn && declineBtn) {
+    // Check if the user has already made a choice in previous sessions/pages
+    const cookieChoice = localStorage.getItem('cookieConsent');
+    
+    if (!cookieChoice) {
+        // Slide the banner up after a brief 1.5-second delay for dramatic effect
+        setTimeout(() => {
+            cookieBanner.classList.remove('translate-y-[150%]');
+        }, 1500);
+    }
+
+    // Function to handle the button clicks
+    const closeBanner = (choice) => {
+        // Save the choice to the browser's local storage
+        localStorage.setItem('cookieConsent', choice);
+        
+        // Slide the banner back down off the screen
+        cookieBanner.classList.add('translate-y-[150%]');
+        
+        // Remove the HTML element from the DOM after the animation completes
+        setTimeout(() => cookieBanner.remove(), 500);
+    };
+
+    // Attach event listeners to the buttons
+    acceptBtn.addEventListener('click', () => closeBanner('accepted'));
+    declineBtn.addEventListener('click', () => closeBanner('declined'));
+}
