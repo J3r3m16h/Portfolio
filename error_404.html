@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen bg-rose-50 flex items-center justify-center p-4">
+    <!-- Loading Animation Overlay -->
+    <div id="brutalist-loader" class="fixed inset-0 z-[9999] bg-[#F4EBE1] flex items-center justify-center p-4 transition-transform duration-700 ease-[cubic-bezier(0.5,0,0,1)]">
+        <div class="bg-white border-[3px] border-black p-8 md:p-10 shadow-[8px_8px_0px_0px_#000] rounded-[24px] flex flex-col w-full max-w-sm">
+            
+            <h2 class="text-3xl font-heading font-bold mb-6 text-black tracking-tight">
+                Jeremiah<span class="text-rose-500 animate-pulse">_</span>
+            </h2>
+            
+            <div class="w-full text-left font-mono text-sm mb-2 font-bold text-gray-800 h-5" id="loader-text">
+                &gt; Initializing system...
+            </div>
+
+            <div class="w-full h-8 border-[3px] border-black bg-stone-100 p-0.5 rounded-lg relative overflow-hidden">
+                <div id="loader-bar" class="h-full bg-rose-400 border-r-[3px] border-black w-0 transition-all duration-200 ease-out"></div>
+            </div>
+        </div>
+    </div>
+    
     <div class="bg-white border-[5px] border-black p-12 text-center rounded-[32px] shadow-[10px_10px_0px_0px_#000] max-w-lg">
         <h1 class="text-8xl font-heading font-bold text-rose-500 mb-4">404</h1>
         <h2 class="text-3xl font-heading font-bold mb-6">Access Denied / Not Found</h2>

@@ -198,3 +198,59 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// --- Brutalist Loader Logic ---
+const loader = document.getElementById('brutalist-loader');
+if (loader) {
+    const loaderBar = document.getElementById('loader-bar');
+    const loaderText = document.getElementById('loader-text');
+    
+    // Cybersecurity-themed loading phases
+    const loadingTexts = [
+        "> Establishing secure connection...",
+        "> Fetching case studies...",
+        "> Bypassing firewalls...",
+        "> Access Granted."
+    ];
+
+    let progress = 0;
+    let textIndex = 0;
+
+    // Simulate random loading progress
+    const loadingInterval = setInterval(() => {
+        // Random jump between 5% and 20%
+        progress += Math.floor(Math.random() * 15) + 5; 
+        if (progress > 100) progress = 100;
+        
+        // Update the width of the brutalist bar
+        loaderBar.style.width = `${progress}%`;
+        
+        // Cycle through terminal text based on progress
+        if (progress > 25 && textIndex === 0) { 
+            textIndex++; loaderText.textContent = loadingTexts[textIndex]; 
+        }
+        if (progress > 60 && textIndex === 1) { 
+            textIndex++; loaderText.textContent = loadingTexts[textIndex]; 
+        }
+        if (progress >= 95 && textIndex === 2) { 
+            textIndex++; 
+            loaderText.textContent = loadingTexts[textIndex];
+            loaderBar.classList.remove('bg-rose-400');
+            loaderBar.classList.add('bg-teal-400'); // Turn green on success
+        }
+
+        // When loading is complete
+        if (progress === 100) {
+            clearInterval(loadingInterval);
+            
+            // Wait a moment at 100%, then slide up
+            setTimeout(() => {
+                // Slide up animation using Tailwind's translate utility
+                loader.style.transform = 'translateY(-100%)'; 
+                
+                // Remove from DOM after the transition finishes to free up memory
+                setTimeout(() => loader.remove(), 700); 
+            }, 600);
+        }
+    }, 150); // Speed of the progress updates
+}

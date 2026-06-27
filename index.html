@@ -13,6 +13,24 @@
 </head>
 <body class="min-h-screen w-full bg-gradient-to-br from-[#ccfbf1] via-[#f5f5f4] to-[#ffedd5] flex items-center justify-center p-4 md:p-8 py-12 selection:bg-rose-300">
 
+    <!-- Loading Animation Overlay -->
+    <div id="brutalist-loader" class="fixed inset-0 z-[9999] bg-[#F4EBE1] flex items-center justify-center p-4 transition-transform duration-700 ease-[cubic-bezier(0.5,0,0,1)]">
+        <div class="bg-white border-[3px] border-black p-8 md:p-10 shadow-[8px_8px_0px_0px_#000] rounded-[24px] flex flex-col w-full max-w-sm">
+            
+            <h2 class="text-3xl font-heading font-bold mb-6 text-black tracking-tight">
+                Jeremiah<span class="text-rose-500 animate-pulse">_</span>
+            </h2>
+            
+            <div class="w-full text-left font-mono text-sm mb-2 font-bold text-gray-800 h-5" id="loader-text">
+                &gt; Initializing system...
+            </div>
+
+            <div class="w-full h-8 border-[3px] border-black bg-stone-100 p-0.5 rounded-lg relative overflow-hidden">
+                <div id="loader-bar" class="h-full bg-rose-400 border-r-[3px] border-black w-0 transition-all duration-200 ease-out"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Centralized Canvas Container -->
     <main class="w-full max-w-7xl bg-[#F4EBE1] border-[3px] border-black rounded-[24px] md:rounded-[32px] shadow-[8px_8px_0px_0px_#000] overflow-hidden flex flex-col my-auto custom-scrollbar">
         
